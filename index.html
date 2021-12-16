@@ -6,7 +6,7 @@
     <script src="image-aframe.js"></script>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" loading-screen="enabled: false">
       <a-assets>
         <a-asset-item id="painting_a" src="painting_a/scene.gltf"></a-asset-item>
         <a-asset-item id="painting_b" src="painting_b/scene.gltf"></a-asset-item>
@@ -17,11 +17,11 @@
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-gltf-model rotation="0 60 0" position="0 1 -2" scale="0.01 0.01 0.01" src="#painting_a" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+        <a-gltf-model rotation="0 60 0" position="0 -1 2" scale="0.01 0.01 0.01" src="#painting_a" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
       </a-entity>
 
       <a-entity mindar-image-target="targetIndex: 1">
-        <a-gltf-model rotation="0 0 0" position="-0.1 0.3 0.1" scale="0.5 0.5 0.5" src="#painting_b" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+        <a-gltf-model rotation="0 0 0" position="-0.1 0.3 0.1" scale="0.5 0.5 0.5" src="#painting_b" animation="property: position; to: 0 0.1 0.0; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
       </a-entity>
 
       <a-entity mindar-image-target="targetIndex: 2">
